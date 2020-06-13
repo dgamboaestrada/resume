@@ -1,0 +1,33 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "My resume",
+  "main": "index.js",
+  "dependencies": {
+    "hackmyresume": "^1.5.0",
+    "jsonresume-theme-kwan": "0.0.2",
+    "underscore.string": "^3.3.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "node_modules/.bin/hackmyresume build resume.json TO dist/resume.html -t node_modules/jsonresume-theme-kwan",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dgamboaestrada/resume.git"
+  },
+  "keywords": [
+    "dgamboaestrada",
+    "resume",
+    "daniel",
+    "gamboa",
+    "estrada"
+  ],
+  "author": "Daniel Gamboa Estrada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dgamboaestrada/resume/issues"
+  },
+  "homepage": "https://github.com/dgamboaestrada/resume#readme"
+}
