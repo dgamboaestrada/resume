@@ -5,12 +5,12 @@
   "main": "index.js",
   "dependencies": {
     "hackmyresume": "^1.5.0",
+    "jsonresume-theme-elegant": "^1.16.1",
     "jsonresume-theme-kwan": "0.0.2",
     "underscore.string": "^3.3.5"
   },
-  "devDependencies": {},
   "scripts": {
-    "build": "node_modules/.bin/hackmyresume build resume.json TO dist/resume.html -t node_modules/jsonresume-theme-kwan",
+    "build": " npx hackmyresume build resume.json TO dist/resume.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

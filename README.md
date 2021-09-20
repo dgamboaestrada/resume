@@ -13,3 +13,5 @@ Building resume:
 ```bash
 npm run-script build
 ```
+
+This project use the (hackmyresume)[https://github.com/hacksalot/HackMyResume] project.

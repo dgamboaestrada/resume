@@ -6,8 +6,8 @@
   },
   "info": {
     "label": "SRE (Site Reliability Engineer)",
-    "brief": "Daniel is a person who likes programming and Cloud Computing technologies. He currently has more than 6 years of experience in backend development and 2 years as SRE. Some of the technologies Daniel has worked on as SRE are: **AWS**, **Terraform** and **Docker**, and as a developer, he has worked mainly with **PHP** and **Ruby**.",
-    "image": ""
+    "brief": "",
+    "image": "Daniel is a person who likes programming and Cloud Computing technologies. He currently has more than 6 years of experience in backend development and 2 years as SRE. Some of the technologies Daniel has worked on as SRE are: **AWS**, **Terraform** and **Docker**, and as a developer, he has worked mainly with **PHP** and **Ruby**."
   },
   "contact": {
     "website": "https://gamboa.xyz",
@@ -106,7 +106,7 @@
         "url": "https://api.youracclaim.com/badges/d926c8e3-c9a6-4403-8560-67b5f1fdc0ac",
         "start": "2021-09-10",
         "grade": "certification",
-        "summary": "https://api.youracclaim.com/badges/d926c8e3-c9a6-4403-8560-67b5f1fdc0ac",
+        "summary": "Computer Systems Engineer",
         "keywords": ["Amazon Web Services", "AWS", "AWS Certification", "AWS Cloud", "Cloud Architecture", "Cloud Certification", "Cloud Data", "Cloud Infrastructure", "Cloud Services"],
         "curriculum": []
       }
