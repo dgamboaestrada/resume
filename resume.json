@@ -1,230 +1,177 @@
 {
-  "name": "Daniel Gamboa Estrada",
-  "meta": {
-    "format": "FRESH@0.3.0",
-    "version": "0.1.0"
-  },
-  "info": {
-    "label": "SRE (Site Reliability Engineer)",
-    "brief": "Daniel is a person who likes programming and Cloud Computing technologies. He currently has more than 6 years of experience in backend development and 2 years as SRE. Some of the technologies Daniel has worked on as SRE are: **AWS**, **Terraform** and **Docker**, and as a developer, he has worked mainly with **PHP** and **Ruby**.",
-    "image": ""
-  },
-  "contact": {
-    "website": "https://gamboa.xyz",
+  "basics": {
+    "name": "Daniel Gamboa Estrada",
+    "label": "Site Reliability Engineer and Backend Developer",
+    "image": "./image.png",
+    "email": "***REMOVED***",
     "phone": "",
-    "email": "",
-    "other": []
-  },
-  "location": {
-    "address": "",
-    "city": "",
-    "region": "Zacatecas",
-    "code": "",
-    "country": "MX"
-  },
-  "social": [
-    {
-      "label": "",
-      "network": "GitHub",
-      "user": "dgamboaestrada",
-      "url": "https://github.com/your-github-username"
+    "url": "https://gamboa.xyz",
+    "summary": "Daniel is a person who likes programming and Cloud Computing technologies. He currently has more than 6 years of experience in backend development and 2 years as SRE. Some of the technologies Daniel has worked on as SRE are: AWS Terraform and Docker, and as a developer, he has worked mainly with PHP and Ruby.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "",
+      "countryCode": "MX",
+      "region": "Zacatecas"
     },
-    {
-      "label": "",
-      "network": "Linkedin",
-      "user": "dgamboaestrada",
+    "profiles": [{
+      "network": "github",
+      "username": "dgamboaestrada",
+      "url": "https://github.com/dgamboaestrada"
+    },{
+      "network": "linkedin",
+      "username": "dgamboaestrada",
       "url": "https://www.linkedin.com/in/dgamboaestrada"
-    }
-  ],
-  "employment": {
-    "summary": "",
-    "history": [
-      {
-        "employer": "Wizeline",
-        "url": "https://wizeline.com",
-        "position": "SRE ",
-        "summary": "",
-        "start": "2020-07",
-        "keywords": [],
-        "highlights": []
-      },
-      {
-        "employer": "Nimanic Technologies",
-        "url": "https://nimanic.com",
-        "position": "Chief developer",
-        "summary": "Daniel worked developing a system which processes requests from IoT devices via MQTT and mobile applications via RESTful API. He was also in charge of managing the services hosted on AWS.",
-        "start": "2019-06",
-        "end": "2020-07",
-        "keywords": [
-          "Ruby",
-          "RubyOnRails",
-          "Docker",
-          "DevOps",
-          "AWS",
-          "IoT",
-          "MQTT"
-        ],
-        "highlights": []
-      },
-      {
-        "employer": "Vinco Orbis Proyectos SA de CV",
-        "url": "https://vincoorbis.com",
-        "position": "Backend developer",
-        "summary": "Daniel was involved in the development of websites, blogs, ecommerce, insurance systems and RESTful API.",
-        "start": "2015-03",
-        "end": "2019-06",
-        "keywords": [
-          "Ruby",
-          "PHP",
-          "WordPress",
-          "Docker",
-          "DevOps"
-        ],
-        "highlights": []
-      }
+    },{
+      "network": "PDF Resume",
+      "username": "download",
+      "url": "https://gamboa.xyz/resume.pdf"
+    }]
+  },
+  "work": [{
+    "company": "Wizeline",
+    "position": "SRE",
+    "url": "https://wizeline.com",
+    "startDate": "2020-07",
+    "endDate": "",
+    "summary": "Daniel is currently working as SRE implementing cloud solutions.",
+    "highlights": [
     ]
-  },
-  "projects": [
-  ],
-  "education": {
-    "summary": "",
-    "level": "degree",
-    "degree": "Computer Systems Engineer",
-    "history": [
-      {
-        "institution": "Instituto Tecnologico de Zacatecas",
-        "url": "https://zacatecas.tecnm.mx",
-        "start": "2008-09",
-        "end": "2013-06",
-        "grade": "degree",
-        "summary": "Computer Systems Engineer",
-        "curriculum": []
-      },
-      {
-        "title": "AWS Certified Solutions Architect – Associate",
-        "institution": "Amazon Web Services Training and Certification",
-        "url": "https://api.youracclaim.com/badges/d926c8e3-c9a6-4403-8560-67b5f1fdc0ac",
-        "start": "2021-09-10",
-        "grade": "certification",
-        "summary": "https://api.youracclaim.com/badges/d926c8e3-c9a6-4403-8560-67b5f1fdc0ac",
-        "keywords": ["Amazon Web Services", "AWS", "AWS Certification", "AWS Cloud", "Cloud Architecture", "Cloud Certification", "Cloud Data", "Cloud Infrastructure", "Cloud Services"],
-        "curriculum": []
-      }
+  }, {
+    "company": "Nimanic Technologies",
+    "position": "Chief developer",
+    "url": "https://wizeline.com",
+    "startDate": "2019-06",
+    "endDate": "2020-07",
+    "summary": "Daniel worked developing a system which processes requests from IoT devices via MQTT and mobile applications via RESTful API. He was also in charge of managing the services hosted on AWS.",
+    "highlights": [
     ]
-  },
-  "service": {
-    "summary": "",
-    "history": []
-  },
-  "skills": {
-    "sets": [
-      {
-        "name": "SRE",
-        "level": "advanced",
-        "skills": [
-          "Terraform",
-          "Docker"
-        ]
-      },
-      {
-        "name": "AWS",
-        "level": "advanced",
-        "skills": [
-          "AWS Cloudfront",
-          "AWS S3",
-          "AWS ECR",
-          "AWS CodeCommit",
-          "AWS Lambda",
-          "AWS Route53",
-          "AWS DynamoDB"
-        ]
-      },
-      {
-        "name": "Backend Development",
-        "level": "advanced",
-        "skills": [
-          "Ruby",
-          "Ruby On Rails",
-          "PHP",
-          "Laravel",
-          "MySQl"
-        ]
-      },
-      {
-        "name": "SRE",
-        "level": "intermediate",
-        "skills": [
-          "Github Actions",
-          "nginx",
-          "bash",
-          "Linux"
-        ]
-      },
-      {
-        "name": "AWS",
-        "level": "intermediate",
-        "skills": [
-          "AWS CodeBuild",
-          "AWS CodeDeploy",
-          "AWS CodePipeline",
-          "AWS SQS",
-          "AWS IAM",
-          "AWS EC2",
-          "AWS Glue",
-          "AWS ECS",
-          "AWS RDS",
-          "AWS CloudWatch",
-          "AWS SNS",
-          "AWS Cognito",
-          "AWS API Gateway",
-          "AWS Athena",
-          "AWS Appsync"
-        ]
-      },
-      {
-        "name": "Backend Development",
-        "level": "intermediate",
-        "skills": [
-          "React JS",
-          "MySQL",
-          "PostgreSQL",
-          "Git"
-        ]
-      },
-      {
-        "name": "Backend Development",
-        "level": "beginner",
-        "skills": [
-          "nodejs",
-          "JavaScript",
-          "Java",
-          "Python"
-        ]
-      }
-    ],
-    "list": []
-  },
-  "samples": [
+  }, {
+    "company": "Vinco Orbis Proyectos SA de CV",
+    "position": "Backend developer, Vinco Orbis Proyectos SA de CV",
+    "url": "https://vincoorbis.com",
+    "startDate": "2015-03",
+    "endDate": "2019-06",
+    "summary": "Daniel was involved in the development of websites, blogs, ecommerce, insurance systems and RESTful API.",
+    "highlights": [
+    ]
+  }],
+  "volunteer": [
   ],
-  "writing": [
+  "education": [{
+    "institution": "Amazon Web Services Training and Certification",
+    "url": "https://api.youracclaim.com/badges/d926c8e3-c9a6-4403-8560-67b5f1fdc0ac",
+    "area": "AWS Certified Solutions Architect – Associate",
+    "studyType": "Certification",
+    "startDate": "2021-09-10",
+    "score": "4.0",
+    "courses": [
+        ""
+    ]
+  },{
+    "institution": "Instituto Tecnológico de Zacatecas",
+    "url": "https://zacatecas.tecnm.mx",
+    "area": "Computer Systems Engineer",
+    "studyType": "Degree",
+    "startDate": "2008-09",
+    "endDate": "2013-06",
+    "score": "4.0",
+    "courses": [
+        ""
+    ]
+  }],
+  "awards": [
   ],
-  "reading": [
+  "publications": [
   ],
-  "recognition": [
+  "skills": [{
+    "name": "SRE",
+    "level": "Advanced",
+    "keywords": [
+      "Terraform",
+      "Docker"
+    ]
+  },{
+    "name": "AWS",
+    "level": "Advanced",
+    "keywords": [
+      "AWS Cloudfront",
+      "AWS S3",
+      "AWS ECR",
+      "AWS CodeCommit",
+      "AWS Lambda",
+      "AWS Route53",
+      "AWS DynamoDB"
+    ]
+  },{
+    "name": "Backend Development",
+    "level": "Advanced",
+    "keywords": [
+      "Ruby",
+      "Ruby On Rails",
+      "PHP",
+      "Laravel",
+      "MySQl"
+    ]
+  },{
+    "name": "SRE",
+    "level": "Intermediate",
+    "keywords": [
+      "Github Actions",
+      "nginx",
+      "Bash",
+      "Linux"
+    ]
+  },{
+    "name": "AWS",
+    "level": "Intermediate",
+    "keywords": [
+      "AWS CodeBuild",
+      "AWS CodeDeploy",
+      "AWS CodePipeline",
+      "AWS SQS",
+      "AWS IAM",
+      "AWS EC2",
+      "AWS Glue",
+      "AWS ECS",
+      "AWS RDS",
+      "AWS CloudWatch",
+      "AWS SNS",
+      "AWS Cognito",
+      "AWS API Gateway",
+      "AWS Athena",
+      "AWS Appsync"
+    ]
+  },{
+    "name": "Backend Development",
+    "level": "Intermediate",
+    "keywords": [
+      "React JS",
+      "MySQL",
+      "PostgreSQL",
+      "Git"
+    ]
+  },{
+    "name": "Backend Development",
+    "level": "Beginner",
+    "keywords": [
+      "nodejs",
+      "JavaScript",
+      "Java",
+      "Python"
+    ]
+  }],
+  "languages": [{
+    "language": "Spanish",
+    "fluency": "Native speaker"
+  },{
+    "language": "English",
+    "fluency": "Advanced"
+  }],
+  "interests": [
   ],
   "references": [
   ],
-  "testimonials": [
-  ],
-  "languages": [
-    {
-      "language": "Spanish",
-      "level": "native"
-    },
-    {
-      "language": "English",
-      "level": "intermediate"
-    }
-  ],
-  "interests": []
+  "projects": [
+  ]
 }

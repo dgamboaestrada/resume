@@ -6,8 +6,8 @@
   },
   "info": {
     "label": "SRE (Site Reliability Engineer)",
-    "brief": "",
-    "image": "Daniel is a person who likes programming and Cloud Computing technologies. He currently has more than 6 years of experience in backend development and 2 years as SRE. Some of the technologies Daniel has worked on as SRE are: **AWS**, **Terraform** and **Docker**, and as a developer, he has worked mainly with **PHP** and **Ruby**."
+    "brief": "Daniel is a person who likes programming and Cloud Computing technologies. He currently has more than 6 years of experience in backend development and 2 years as SRE. Some of the technologies Daniel has worked on as SRE are: **AWS**, **Terraform** and **Docker**, and as a developer, he has worked mainly with **PHP** and **Ruby**.",
+    "image": ""
   },
   "contact": {
     "website": "https://gamboa.xyz",
@@ -92,22 +92,22 @@
     "degree": "Computer Systems Engineer",
     "history": [
       {
-        "title": "AWS Certified Solutions Architect – Associate",
-        "institution": "Amazon Web Services Training and Certification",
-        "url": "https://api.youracclaim.com/badges/d926c8e3-c9a6-4403-8560-67b5f1fdc0ac",
-        "start": "2021-09-10",
-        "grade": "certification",
-        "summary": "Computer Systems Engineer",
-        "keywords": ["Amazon Web Services", "AWS", "AWS Certification", "AWS Cloud", "Cloud Architecture", "Cloud Certification", "Cloud Data", "Cloud Infrastructure", "Cloud Services"],
-        "curriculum": []
-      },
-      {
         "institution": "Instituto Tecnologico de Zacatecas",
         "url": "https://zacatecas.tecnm.mx",
         "start": "2008-09",
         "end": "2013-06",
         "grade": "degree",
         "summary": "Computer Systems Engineer",
+        "curriculum": []
+      },
+      {
+        "title": "AWS Certified Solutions Architect – Associate",
+        "institution": "Amazon Web Services Training and Certification",
+        "url": "https://api.youracclaim.com/badges/d926c8e3-c9a6-4403-8560-67b5f1fdc0ac",
+        "start": "2021-09-10",
+        "grade": "certification",
+        "summary": "https://api.youracclaim.com/badges/d926c8e3-c9a6-4403-8560-67b5f1fdc0ac",
+        "keywords": ["Amazon Web Services", "AWS", "AWS Certification", "AWS Cloud", "Cloud Architecture", "Cloud Certification", "Cloud Data", "Cloud Infrastructure", "Cloud Services"],
         "curriculum": []
       }
     ]
@@ -156,7 +156,7 @@
         "skills": [
           "Github Actions",
           "nginx",
-          "Bash",
+          "bash",
           "Linux"
         ]
       },
@@ -223,7 +223,7 @@
     },
     {
       "language": "English",
-      "level": "advanced"
+      "level": "intermediate"
     }
   ],
   "interests": []

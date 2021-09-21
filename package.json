@@ -5,12 +5,15 @@
   "main": "index.js",
   "dependencies": {
     "hackmyresume": "^1.5.0",
+    "jsonresume-theme-class": "^0.1.2",
     "jsonresume-theme-elegant": "^1.16.1",
-    "jsonresume-theme-kwan": "0.0.2",
+    "jsonresume-theme-kwan": "^0.0.2",
+    "resume-cli": "^3.0.5",
     "underscore.string": "^3.3.5"
   },
   "scripts": {
-    "build": " npx hackmyresume build resume.json TO dist/resume.html",
+    "build": "npx resume export --format html --theme kwan dist/resume.html",
+    "build-hackmyresume": "npx hackmyresume build resume.json TO dist/resume.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
