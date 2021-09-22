@@ -14,4 +14,4 @@ Building resume:
 npm run-script build
 ```
 
-This project use the [resume-cli](https://github.com/jsonresume/resume-cli) or [hackmyresume](https://github.com/hacksalot/HackMyResume) to generate the resume file.
+This project use the [resume-cli](https://github.com/jsonresume/resume-cli) to generate the resume file.

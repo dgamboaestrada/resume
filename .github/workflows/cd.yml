@@ -1,0 +1,74 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CD
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push but only for the master branch
+  push:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  deploy:
+    env:
+      HOST: ${{ secrets.HOST }}
+      USER_HOST: ${{ secrets.USER_HOST }}
+      HOST_DIRECTORY_PATH: ${{ secrets.HOST_DIRECTORY_PATH }}
+
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: Install node
+        run: |
+          sudo apt-get update
+          sudo apt-get install nodejs
+
+      - name: Cache NPM dependencies
+        uses: actions/cache@v1
+        with:
+          path: |
+            ~/.npm
+            node_modules
+            */*/node_modules
+          key: ${{ runner.OS }}-npm-cache-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.OS }}-npm-cache-
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build jsonresume page
+        run: npm run-script build
+
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_KEY }}
+          name: id_rsa
+          known_hosts: ${{ secrets.HOST }}
+          config: |
+            Host server
+            HostName ${{ secrets.HOST }}
+            User ${{ secrets.USER_HOST }}
+            IdentityFile ~/.ssh/id_rsa
+          if_key_exists: fail # replace / ignore / fail; optional (defaults to fail)
+
+      - name: Add host to known_hosts
+        run: ssh-keyscan -H $HOST >> ~/.ssh/known_hosts
+
+      - name: Deploy jsonresume page
+        run: scp dist/resume.html server:$HOST_DIRECTORY_PATH/index.html
+
+      - name: Deploy pdf resume
+        run: scp resume.pdf server:$HOST_DIRECTORY_PATH/resume.pdf
+
