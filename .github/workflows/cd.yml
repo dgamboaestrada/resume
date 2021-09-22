@@ -17,7 +17,6 @@ jobs:
   deploy:
     env:
       HOST: ${{ secrets.HOST }}
-      USER_HOST: ${{ secrets.USER_HOST }}
       HOST_DIRECTORY_PATH: ${{ secrets.HOST_DIRECTORY_PATH }}
 
     # The type of runner that the job will run on
@@ -45,6 +44,15 @@ jobs:
 
       - name: Build jsonresume page
         run: npm run-script build
+
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: dist
+          path: |
+            dist
+            !dist/**/*.gitkeep
+          retention-days: 7
 
       - name: Install SSH key
         uses: shimataro/ssh-key-action@v2
