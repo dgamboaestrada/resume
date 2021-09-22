@@ -27,6 +27,10 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '12.18.3'
+          cache: 'npm'
 
       - name: Cache NPM dependencies
         uses: actions/cache@v1
@@ -35,11 +39,6 @@ jobs:
           key: ${{ runner.OS }}-npm-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.OS }}-npm-
-
-      - name: Install node
-        run: |
-          sudo apt-get update
-          sudo apt-get install nodejs
 
       - name: Install dependencies
         run: npm install
