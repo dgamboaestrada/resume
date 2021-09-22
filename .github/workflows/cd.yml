@@ -55,6 +55,8 @@ jobs:
     env:
       HOST: ${{ secrets.HOST }}
       HOST_DIRECTORY_PATH: ${{ secrets.HOST_DIRECTORY_PATH }}
+      CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+      CLOUDFLARE_API_KEY: ${{ secrets.CLOUDFLARE_API_KEY }}
 
     runs-on: ubuntu-latest
 
@@ -89,3 +91,9 @@ jobs:
       - name: Deploy pdf resume
         run: scp resume.pdf server:$HOST_DIRECTORY_PATH/resume.pdf
 
+      - name: Purge cloudflare cache
+        run: |
+          curl -X POST "https://api.cloudflare.com/client/v4/zones/$CLOUDFLARE_ZONE_ID/purge_cache" \
+          -H "Authorization: Bearer $CLOUDFLARE_API_KEY" \
+          -H "Content-Type: application/json" \
+          --data '{"purge_everything":true}'
