@@ -1,7 +1,7 @@
 # Resume
 Resume
 
-Requirements
+Requirements:
 - nodejs
 
 Installing:

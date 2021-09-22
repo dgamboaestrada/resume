@@ -4,7 +4,6 @@
   "description": "My resume",
   "main": "index.js",
   "dependencies": {
-    "jsonresume-theme-class": "^0.1.2",
     "jsonresume-theme-elegant": "^1.16.1",
     "jsonresume-theme-kwan": "^0.0.2",
     "resume-cli": "^3.0.5",
