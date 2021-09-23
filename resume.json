@@ -21,7 +21,11 @@
     },{
       "network": "linkedin",
       "username": "dgamboaestrada",
-      "url": "https://www.linkedin.com/in/dgamboaestrada"
+      "url": "https://linkedin.com/in/dgamboaestrada"
+    },{
+      "network": "dockerhub",
+      "username": "jefecito",
+      "url": "https://hub.docker.com/u/jefecito"
     },{
       "network": "PDF Resume",
       "username": "download",
