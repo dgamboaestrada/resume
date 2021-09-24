@@ -1,3 +1,5 @@
+[![CD](https://github.com/dgamboaestrada/resume/actions/workflows/cd.yml/badge.svg)](https://github.com/dgamboaestrada/resume/actions/workflows/cd.yml)
+
 # Resume
 Resume
 
