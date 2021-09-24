@@ -1,4 +1,4 @@
-[![CD](https://github.com/dgamboaestrada/resume/actions/workflows/cd.yml/badge.svg)](https://github.com/dgamboaestrada/resume/actions/workflows/cd.yml)
+[![Build-and-deploy](https://github.com/dgamboaestrada/resume/actions/workflows/build-and-deploy.yml/badge.svg)](https://github.com/dgamboaestrada/resume/actions/workflows/build-and-deploy.yml)
 
 # Resume
 Resume
