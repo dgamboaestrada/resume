@@ -14,7 +14,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  build-resume:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -41,6 +41,9 @@ jobs:
       - name: Build jsonresume page
         run: npm run-script build
 
+      - name: Copy resume pdf to dist folder
+        run: cp resume.pdf dist/
+
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2
         with:
@@ -50,8 +53,32 @@ jobs:
             !dist/**/*.gitkeep
           retention-days: 7
 
+  build-image:
+    needs: build-resume
+    env:
+      DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Download production artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: dist
+          path: dist
+
+      - name: Docker login
+        run: echo "$DOCKER_PASSWORD" | docker login --username=$DOCKER_USERNAME --password-stdin
+
+      - name: Build image
+        run: docker build -t jefecito/resume:latest -f Dockerfile dist
+
+      - name: Push image
+        run: docker push jefecito/resume:latest
+
   deploy:
-    needs: build
+    needs: build-image
     env:
       HOST: ${{ secrets.HOST }}
       HOST_DIRECTORY_PATH: ${{ secrets.HOST_DIRECTORY_PATH }}
@@ -62,12 +89,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
-      - name: Download production artifacts
-        uses: actions/download-artifact@v2
-        with:
-          name: dist
-          path: dist
 
       - name: Install SSH key
         uses: shimataro/ssh-key-action@v2
@@ -85,11 +106,11 @@ jobs:
       - name: Add host to known_hosts
         run: ssh-keyscan -H $HOST >> ~/.ssh/known_hosts
 
-      - name: Deploy jsonresume page
-        run: scp dist/resume.html server:$HOST_DIRECTORY_PATH/index.html
-
-      - name: Deploy pdf resume
-        run: scp resume.pdf server:$HOST_DIRECTORY_PATH/resume.pdf
+      - name: Deploy new image
+        run: |
+          ssh server "docker pull jefecito/resume:latest"
+          ssh server "cd $HOST_DIRECTORY_PATH && docker-compose up -d"
+          ssh server "docker image prune -f"
 
       - name: Purge cloudflare cache
         run: |
