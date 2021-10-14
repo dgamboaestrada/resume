@@ -38,11 +38,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build jsonresume page
+      - name: Build html resume
         run: npm run-script build
 
-      - name: Copy resume pdf to dist folder
-        run: cp resume.pdf dist/
+      - name: Build pdf resume
+        run: npm run-script build-pdf
 
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2

@@ -11,6 +11,7 @@
   },
   "scripts": {
     "build": "npx resume export --format html --theme kwan dist/resume.html",
+    "build-pdf": "npx resume export --format pdf --theme kwan dist/resume.pdf",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
