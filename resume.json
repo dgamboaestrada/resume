@@ -3,7 +3,7 @@
     "name": "Daniel Gamboa Estrada",
     "label": "Site Reliability Engineer and Backend Developer",
     "image": "./image.png",
-    "email": "",
+    "email": "daniel@gamboaestrada.com",
     "phone": "",
     "url": "https://gamboa.xyz",
     "summary": "Daniel is a person who likes programming and Cloud Computing technologies. He currently has more than 6 years of experience in backend development and 2 years as SRE. Some of the technologies Daniel has worked on as SRE are: AWS Terraform and Docker, and as a developer, he has worked mainly with PHP and Ruby.",
@@ -11,8 +11,8 @@
       "address": "",
       "postalCode": "",
       "city": "",
-      "countryCode": "MX",
-      "region": "Zacatecas"
+      "countryCode": "",
+      "region": ""
     },
     "profiles": [{
       "network": "github",
