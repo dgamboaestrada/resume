@@ -5,7 +5,7 @@
     "image": "./image.png",
     "email": "daniel@gamboaestrada.com",
     "phone": "",
-    "url": "https://gamboa.xyz",
+    "url": "https://gamboaestrada.com",
     "summary": "Daniel is a person who likes programming and Cloud Computing technologies. He currently has more than 6 years of experience in backend development and 2 years as SRE. Some of the technologies Daniel has worked on as SRE are: AWS Terraform and Docker, and as a developer, he has worked mainly with PHP and Ruby.",
     "location": {
       "address": "",
@@ -29,7 +29,7 @@
     },{
       "network": "PDF Resume",
       "username": "download",
-      "url": "https://gamboa.xyz/resume.pdf"
+      "url": "https://gamboaestrada.com/resume.pdf"
     }]
   },
   "work": [{
