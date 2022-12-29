@@ -93,7 +93,8 @@
     "level": "Advanced",
     "keywords": [
       "Terraform",
-      "Docker"
+      "Docker",
+      "Git"
     ]
   },{
     "name": "AWS",
@@ -105,6 +106,9 @@
       "AWS CodeCommit",
       "AWS Lambda",
       "AWS Route53",
+      "AWS EC2",
+      "AWS ECS",
+      "AWS CloudWatch",
       "AWS DynamoDB"
     ]
   },{
@@ -124,7 +128,10 @@
       "Github Actions",
       "nginx",
       "Bash",
-      "Linux"
+      "Linux",
+      "Jenkins",
+      "JFrog Artifactory",
+      "Ansible"
     ]
   },{
     "name": "AWS",
@@ -135,16 +142,16 @@
       "AWS CodePipeline",
       "AWS SQS",
       "AWS IAM",
-      "AWS EC2",
       "AWS Glue",
-      "AWS ECS",
       "AWS RDS",
-      "AWS CloudWatch",
       "AWS SNS",
       "AWS Cognito",
       "AWS API Gateway",
       "AWS Athena",
-      "AWS Appsync"
+      "AWS Appsync",
+      "Amazon S3 File Gateway",
+      "AWS WAF",
+      "AWS SES"
     ]
   },{
     "name": "Backend Development",
@@ -152,8 +159,7 @@
     "keywords": [
       "React JS",
       "MySQL",
-      "PostgreSQL",
-      "Git"
+      "PostgreSQL"
     ]
   },{
     "name": "Backend Development",
