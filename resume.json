@@ -151,7 +151,8 @@
       "AWS Appsync",
       "Amazon S3 File Gateway",
       "AWS WAF",
-      "AWS SES"
+      "AWS SES",
+      "AWS VPC Endpoint"
     ]
   },{
     "name": "Backend Development",
