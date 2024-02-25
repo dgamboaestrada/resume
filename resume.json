@@ -5,14 +5,14 @@
     "image": "./image.png",
     "email": "contact@danielgamboa.mx",
     "phone": "",
-    "url": "https://gamboaestrada.com",
-    "summary": "Daniel is a person who likes programming and Cloud Computing technologies. He currently has more than 7 years of experience in backend development and 2 years as SRE. Some of the technologies Daniel has worked on as SRE are: AWS Terraform and Docker, and as a developer, he has worked mainly with PHP and Ruby.",
+    "url": "https://danielgamboa.mx",
+    "summary": "Daniel is an experienced Software Engineer with a passion for technology and innovation. Over 8 years of experience in backend development, DevOps, and cloud service management. Some of the technologies Daniel has worked on as SRE are: AWS, Terraform and Docker. As a developer, he has worked mainly with PHP and Ruby.",
     "location": {
       "address": "",
       "postalCode": "",
       "city": "",
       "countryCode": "",
-      "region": ""
+      "region": "Mexico"
     },
     "profiles": [{
       "network": "github",
@@ -29,7 +29,7 @@
     },{
       "network": "PDF Resume",
       "username": "download",
-      "url": "https://gamboaestrada.com/resume.pdf"
+      "url": "https://danielgamboa.mx/resume.pdf"
     }]
   },
   "work": [{
@@ -38,17 +38,23 @@
     "url": "https://wizeline.com",
     "startDate": "2020-07",
     "endDate": "",
-    "summary": "Daniel is currently working as SRE implementing cloud solutions.",
+    "summary": "Daniel has been working for Wizeline as Cloud Infrastructure Engineer - Terraform, AWS & CI/CD Expert.",
     "highlights": [
+      "Implemented a scalable and secure infrastructure on AWS.",
+      "Automated deployments with CI/CD for Terraform and Node projects using AWS Pipeline technologies.",
+      "Configured and integrated JFrog for artifact management.",
+      "Infrastructure development implemented only serverless technologies for data management and implementation of an IoT application."
     ]
   }, {
     "company": "Nimanic Technologies",
     "position": "Chief developer",
-    "url": "https://wizeline.com",
+    "url": "https://nimanic.com/",
     "startDate": "2019-06",
     "endDate": "2020-07",
-    "summary": "Daniel worked developing a system which processes requests from IoT devices via MQTT and mobile applications via RESTful API. He was also in charge of managing the services hosted on AWS.",
+    "summary": "Daniel worked developing a system which processes requests from IoT devices via MQTT and mobile applications via RESTful API.",
     "highlights": [
+      "Lead developer",
+      "In charge of managing the services hosted on AWS"
     ]
   }, {
     "company": "Vinco Orbis Proyectos SA de CV",
@@ -58,6 +64,7 @@
     "endDate": "2019-06",
     "summary": "Daniel was involved in the development of websites, blogs, ecommerce, insurance systems and RESTful API.",
     "highlights": [
+      "Lead developer"
     ]
   }],
   "volunteer": [
@@ -94,7 +101,8 @@
     "keywords": [
       "Terraform",
       "Docker",
-      "Git"
+      "Git",
+      "JFrog Artifactory"
     ]
   },{
     "name": "AWS",
@@ -109,7 +117,10 @@
       "AWS EC2",
       "AWS ECS",
       "AWS CloudWatch",
-      "AWS DynamoDB"
+      "AWS DynamoDB",
+      "AWS CodeBuild",
+      "AWS CodeDeploy",
+      "AWS CodePipeline"
     ]
   },{
     "name": "Backend Development",
@@ -130,16 +141,12 @@
       "Bash",
       "Linux",
       "Jenkins",
-      "JFrog Artifactory",
       "Ansible"
     ]
   },{
     "name": "AWS",
     "level": "Intermediate",
     "keywords": [
-      "AWS CodeBuild",
-      "AWS CodeDeploy",
-      "AWS CodePipeline",
       "AWS SQS",
       "AWS IAM",
       "AWS Glue",
@@ -160,7 +167,8 @@
     "keywords": [
       "React JS",
       "MySQL",
-      "PostgreSQL"
+      "PostgreSQL",
+      "Python"
     ]
   },{
     "name": "Backend Development",
@@ -168,8 +176,7 @@
     "keywords": [
       "nodejs",
       "JavaScript",
-      "Java",
-      "Python"
+      "Java"
     ]
   }],
   "languages": [{
