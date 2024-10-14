@@ -6,7 +6,7 @@
     "email": "contact@danielgamboa.mx",
     "phone": "",
     "url": "https://danielgamboa.mx",
-    "summary": "Daniel is an experienced Software Engineer with a passion for technology and innovation. Over 8 years of experience in backend development, DevOps, and cloud service management. Some of the technologies Daniel has worked on as SRE are: AWS, Terraform and Docker. As a developer, he has worked mainly with PHP and Ruby.",
+    "summary": "Daniel is an experienced Software Engineer with a passion for technology and innovation. Over 9 years of experience in backend development, DevOps, and cloud service management. Some of the technologies Daniel has worked on as SRE are: AWS, Terraform and Docker. As a developer, he has worked mainly with PHP and Ruby.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -41,7 +41,7 @@
     "summary": "Daniel has been working for Wizeline as Cloud Infrastructure Engineer - Terraform, AWS & CI/CD Expert.",
     "highlights": [
       "Implemented a scalable and secure infrastructure on AWS.",
-      "Automated deployments with CI/CD for Terraform and Node projects using AWS Pipeline technologies.",
+      "Automated deployments with CI/CD for Terraform and Node projects using AWS Pipeline and Jenkins technologies.",
       "Configured and integrated JFrog for artifact management.",
       "Infrastructure development implemented only serverless technologies for data management and implementation of an IoT application."
     ]
