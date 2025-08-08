@@ -9,7 +9,7 @@
   "dependencies": {
     "jsonresume-theme-elegant": "^1.16.1",
     "jsonresume-theme-kwan": "^0.0.2",
-    "resume-cli": "^3.0.8",
+    "resume-cli": "^3.1.2",
     "underscore.string": "^3.3.6"
   },
   "scripts": {
