@@ -11,9 +11,19 @@ Install dependencies:
 npm install
 ```
 
-Build resume:
+Build resume (both languages):
 ```bash
 npm run-script build
+```
+
+Build resume in English only:
+```bash
+npm run build:en
+```
+
+Build resume in Spanish only:
+```bash
+npm run build:es
 ```
 
 Build docker image:

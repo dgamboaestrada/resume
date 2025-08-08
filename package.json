@@ -10,8 +10,12 @@
     "underscore.string": "^3.3.6"
   },
   "scripts": {
-    "build": "npx resume export --format html --theme kwan dist/resume.html",
-    "build-pdf": "npx resume export --format pdf --theme kwan dist/resume.pdf",
+    "build": "npm run build:en && npm run build:es",
+    "build:en": "npx resume export --format html --theme kwan --resume resume.json dist/resume.html",
+    "build:es": "npx resume export --format html --theme kwan --resume resume_es.json dist/resume_es.html",
+    "build-pdf": "npm run build-pdf:en && npm run build-pdf:es",
+    "build-pdf:en": "npx resume export --format pdf --theme kwan --resume resume.json dist/resume.pdf",
+    "build-pdf:es": "npx resume export --format pdf --theme kwan --resume resume_es.json dist/resume_es.pdf",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
