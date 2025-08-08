@@ -27,6 +27,9 @@ jobs:
           node-version: '24.5.0'
           cache: 'npm'
 
+      - name: Setup Puppeteer
+        uses: browser-actions/setup-chrome@v1
+
       - name: Install dependencies
         run: npm ci
 
@@ -35,6 +38,10 @@ jobs:
 
       - name: Build pdf resume
         run: npm run-script build-pdf
+        env:
+          PUPPETEER_EXECUTABLE_PATH: '/opt/google/chrome/chrome'
+          PUPPETEER_DISABLE_HEADLESS_WARNING: 'true'
+          PUPPETEER_ARGS: '--no-sandbox --disable-setuid-sandbox --disable-dev-shm-usage'
 
       - name: Archive production artifacts
         uses: actions/upload-artifact@v4
@@ -59,6 +66,9 @@ jobs:
         with:
           name: dist
           path: dist
+
+      - name: list files
+        run: ls -la dist
 
       - name: Docker login
         run: echo "$DOCKER_PASSWORD" | docker login --username=$DOCKER_USERNAME --password-stdin
