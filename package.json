@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "My resume",
   "main": "index.js",
+  "engines": {
+    "node": "24.5.0"
+  },
   "dependencies": {
     "jsonresume-theme-elegant": "^1.16.1",
     "jsonresume-theme-kwan": "^0.0.2",
