@@ -190,6 +190,12 @@
       "JavaScript",
       "Java"
     ]
+  },{
+    "name": "IA",
+    "level": "Intermediate",
+    "keywords": [
+      "Cursor"
+    ]
   }],
   "languages": [{
     "language": "Español",
