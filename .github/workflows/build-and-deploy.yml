@@ -33,11 +33,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Install theme dependencies
+        run: cd jsonresume-themes/google-style && npm ci
+
       - name: Build html resume
-        run: npm run-script build
+        run: npm run build
 
       - name: Build pdf resume
-        run: npm run-script build-pdf
+        run: npm run build-pdf
         env:
           PUPPETEER_EXECUTABLE_PATH: '/opt/google/chrome/chrome'
           PUPPETEER_DISABLE_HEADLESS_WARNING: 'true'
