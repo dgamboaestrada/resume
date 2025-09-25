@@ -101,7 +101,7 @@
   ],
   "skills": [{
     "name": "SRE",
-    "level": "Advanced",
+    "level": "Avanzado",
     "keywords": [
       "Terraform",
       "Docker",
@@ -110,7 +110,7 @@
     ]
   },{
     "name": "AWS",
-    "level": "Advanced",
+    "level": "Avanzado",
     "keywords": [
       "AWS Cloudfront",
       "AWS S3",
@@ -128,7 +128,7 @@
     ]
   },{
     "name": "Desarrollo Backend",
-    "level": "Advanced",
+    "level": "Avanzado",
     "keywords": [
       "Ruby",
       "Ruby On Rails",
@@ -138,7 +138,7 @@
     ]
   },{
     "name": "SRE",
-    "level": "Intermediate",
+    "level": "Intermedio",
     "keywords": [
       "Github Actions",
       "nginx",
@@ -149,7 +149,7 @@
     ]
   },{
     "name": "AWS",
-    "level": "Intermediate",
+    "level": "Intermedio",
     "keywords": [
       "AWS SQS",
       "AWS IAM",
@@ -167,7 +167,7 @@
     ]
   },{
     "name": "Desarrollo Backend",
-    "level": "Intermediate",
+    "level": "Intermedio",
     "keywords": [
       "React JS",
       "MySQL",
@@ -176,7 +176,7 @@
     ]
   },{
     "name": "Desarrollo Backend",
-    "level": "Beginner",
+    "level": "Principiante",
     "keywords": [
       "nodejs",
       "JavaScript",
@@ -184,7 +184,7 @@
     ]
   },{
     "name": "IA",
-    "level": "Intermediate",
+    "level": "Intermedio",
     "keywords": [
       "Cursor"
     ]

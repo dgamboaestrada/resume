@@ -429,6 +429,19 @@ body {
   border-left-color: var(--google-red);
 }
 
+/* Spanish skill level colors */
+.skill-group.avanzado {
+  border-left-color: var(--google-green);
+}
+
+.skill-group.intermedio {
+  border-left-color: var(--google-yellow);
+}
+
+.skill-group.principiante {
+  border-left-color: var(--google-red);
+}
+
 .skill-header {
   display: flex;
   justify-content: space-between;
@@ -463,6 +476,22 @@ body {
 }
 
 .skill-level.beginner {
+  background: rgba(234, 67, 53, 0.1);
+  color: var(--google-red);
+}
+
+/* Spanish skill level badges */
+.skill-level.avanzado {
+  background: rgba(52, 168, 83, 0.1);
+  color: var(--google-green);
+}
+
+.skill-level.intermedio {
+  background: rgba(251, 188, 4, 0.1);
+  color: #b8860b;
+}
+
+.skill-level.principiante {
   background: rgba(234, 67, 53, 0.1);
   color: var(--google-red);
 }
