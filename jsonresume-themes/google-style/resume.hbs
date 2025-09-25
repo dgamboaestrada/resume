@@ -11,6 +11,27 @@
     <style>{{{css}}}</style>
 </head>
 <body>
+    <!-- Language Menu -->
+    <div class="language-menu">
+        <div class="language-toggle">
+            <i class="fas fa-globe"></i>
+            <span class="current-lang">Language</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="language-dropdown">
+            {{#with resume.basics}}
+            {{#each profiles}}
+            {{#if (eq network "language")}}
+            <a href="{{url}}" class="language-option">
+                <i class="fas fa-language"></i>
+                <span>{{username}}</span>
+            </a>
+            {{/if}}
+            {{/each}}
+            {{/with}}
+        </div>
+    </div>
+
     <div class="container">
         <!-- Header Section -->
         <header class="header">
@@ -64,9 +85,11 @@
                     {{#if profiles}}
                     <div class="social-links">
                         {{#each profiles}}
+                        {{#unless (eq network "language")}}
                         <a href="{{url}}" target="_blank" class="social-link" title="{{network}}">
                             <i class="{{getIconClass network}}"></i>
                         </a>
+                        {{/unless}}
                         {{/each}}
                     </div>
                     {{/if}}
@@ -268,5 +291,31 @@
             {{/if}}
         </main>
     </div>
+
+    <script>
+        // Language menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageMenu = document.querySelector('.language-menu');
+            const languageToggle = document.querySelector('.language-toggle');
+            const languageDropdown = document.querySelector('.language-dropdown');
+
+            if (languageToggle && languageDropdown) {
+                languageToggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    languageMenu.classList.toggle('active');
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', function() {
+                    languageMenu.classList.remove('active');
+                });
+
+                // Prevent menu close when clicking inside dropdown
+                languageDropdown.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                });
+            }
+        });
+    </script>
 </body>
 </html>

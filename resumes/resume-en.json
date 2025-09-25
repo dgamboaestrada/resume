@@ -29,19 +29,11 @@
     },{
       "network": "language",
       "username": "Español",
-      "url": "https://danielgamboa.mx/resume_es.html"
-    },{
-      "network": "pdf",
-      "username": "PDF (ES)",
-      "url": "https://danielgamboa.mx/resume_es.pdf"
-    },{
-      "network": "language",
-      "username": "English",
-      "url": "https://danielgamboa.mx/resume.html"
+      "url": "./resume_es.html"
     },{
       "network": "pdf",
       "username": "PDF (EN)",
-      "url": "https://danielgamboa.mx/resume.pdf"
+      "url": "./resume.pdf"
     }]
   },
   "work": [{
