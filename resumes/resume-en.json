@@ -27,20 +27,20 @@
       "username": "jefecito",
       "url": "https://hub.docker.com/u/jefecito"
     },{
-      "network": "HTML Resume (ES)",
-      "username": "download",
+      "network": "language",
+      "username": "Español",
       "url": "https://danielgamboa.mx/resume_es.html"
     },{
-      "network": "PDF Resume (ES)",
-      "username": "download",
+      "network": "pdf",
+      "username": "PDF (ES)",
       "url": "https://danielgamboa.mx/resume_es.pdf"
     },{
-      "network": "HTML Resume (EN)",
-      "username": "download",
+      "network": "language",
+      "username": "English",
       "url": "https://danielgamboa.mx/resume.html"
     },{
-      "network": "PDF Resume (EN)",
-      "username": "download",
+      "network": "pdf",
+      "username": "PDF (EN)",
       "url": "https://danielgamboa.mx/resume.pdf"
     }]
   },

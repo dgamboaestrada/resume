@@ -51,7 +51,12 @@ function render(resume) {
             'email': 'fas fa-envelope',
             'phone': 'fas fa-phone',
             'dockerhub': 'fab fa-docker',
-            'stackoverflow': 'fab fa-stack-overflow'
+            'stackoverflow': 'fab fa-stack-overflow',
+            'html': 'fas fa-file-code',
+            'pdf': 'fas fa-file-pdf',
+            'document': 'fas fa-file-alt',
+            'language': 'fas fa-language',
+            'external': 'fas fa-external-link-alt'
         };
 
         const networkLower = network ? network.toLowerCase() : '';
