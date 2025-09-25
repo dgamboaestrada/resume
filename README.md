@@ -1,34 +1,47 @@
 [![Build-and-deploy](https://github.com/dgamboaestrada/resume/actions/workflows/build-and-deploy.yml/badge.svg)](https://github.com/dgamboaestrada/resume/actions/workflows/build-and-deploy.yml)
 
-# Resume
-Resume
+# 📄 Daniel Gamboa Estrada - Resume
 
-Requirements:
-- nodejs
+Automated resume generation with custom Google Style theme.
 
-Install dependencies:
+## Requirements
+
+- Node.js
+
+## Usage
+
 ```bash
+# Install dependencies
 npm install
+
+# Build both languages
+npm run build
+
+# Build specific language
+npm run build:en    # English
+npm run build:es    # Spanish
+
+# Generate PDFs
+npm run build-pdf
+
+# Development server
+npm run preview     # English
+npm run preview:es  # Spanish
 ```
 
-Build resume (both languages):
+## Structure
+
+```
+resumes/              # Resume data (JSON)
+jsonresume-themes/    # Custom themes
+dist/                 # Generated files
+```
+
+## Docker
+
 ```bash
-npm run-script build
+npm run build
+docker build -t resume -f Dockerfile dist
 ```
 
-Build resume in English only:
-```bash
-npm run build:en
-```
-
-Build resume in Spanish only:
-```bash
-npm run build:es
-```
-
-Build docker image:
-```bash
-docker build -t <image:tag> -f Dockerfile dist
-```
-
-This project use the [resume-cli](https://github.com/jsonresume/resume-cli) to generate the resume file.
+Built with [resume-cli](https://github.com/jsonresume/resume-cli) and Material Design.
