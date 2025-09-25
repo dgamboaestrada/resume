@@ -7,18 +7,17 @@
     "node": "24.5.0"
   },
   "dependencies": {
-    "jsonresume-theme-elegant": "^1.16.1",
-    "jsonresume-theme-kwan": "^0.0.2",
-    "resume-cli": "^3.1.2",
-    "underscore.string": "^3.3.6"
+    "resume-cli": "^3.1.2"
   },
   "scripts": {
     "build": "npm run build:en && npm run build:es",
-    "build:en": "npx resume export --format html --theme kwan --resume resume.json dist/resume.html",
-    "build:es": "npx resume export --format html --theme kwan --resume resume_es.json dist/resume_es.html",
+    "build:en": "node ./node_modules/.bin/resume export --format html --theme ./jsonresume-themes/google-style --resume resumes/resume-en.json dist/resume.html",
+    "build:es": "node ./node_modules/.bin/resume export --format html --theme ./jsonresume-themes/google-style --resume resumes/resume-es.json dist/resume_es.html",
     "build-pdf": "npm run build-pdf:en && npm run build-pdf:es",
-    "build-pdf:en": "npx resume export --format pdf --theme kwan --resume resume.json dist/resume.pdf",
-    "build-pdf:es": "npx resume export --format pdf --theme kwan --resume resume_es.json dist/resume_es.pdf",
+    "build-pdf:en": "node ./node_modules/.bin/resume export --format pdf --theme ./jsonresume-themes/google-style --resume resumes/resume-en.json dist/resume.pdf",
+    "build-pdf:es": "node ./node_modules/.bin/resume export --format pdf --theme ./jsonresume-themes/google-style --resume resumes/resume-es.json dist/resume_es.pdf",
+    "preview": "node ./node_modules/.bin/resume serve --theme ./jsonresume-themes/google-style --resume resumes/resume-en.json --port 4000",
+    "preview:es": "node ./node_modules/.bin/resume serve --theme ./jsonresume-themes/google-style --resume resumes/resume-es.json --port 4001",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

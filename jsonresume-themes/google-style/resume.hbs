@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{resume.basics.name}} - Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>{{{css}}}</style>
+</head>
+<body>
+    <!-- Language Menu -->
+    <div class="language-menu">
+        <div class="language-toggle">
+            <i class="fas fa-globe"></i>
+            <span class="current-lang">Language</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="language-dropdown">
+            {{#with resume.basics}}
+            {{#each profiles}}
+            {{#if (eq network "language")}}
+            <a href="{{url}}" class="language-option">
+                <i class="fas fa-language"></i>
+                <span>{{username}}</span>
+            </a>
+            {{/if}}
+            {{/each}}
+            {{/with}}
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            {{#with resume.basics}}
+            <div class="header-content">
+                <div class="profile-section">
+                    {{#if picture}}
+                    <div class="avatar">
+                        <img src="{{picture}}" alt="{{name}}">
+                    </div>
+                    {{/if}}
+                    <div class="profile-info">
+                        <h1 class="name">{{name}}</h1>
+                        <h2 class="title">{{label}}</h2>
+                        {{#if summary}}
+                        <p class="summary">{{summary}}</p>
+                        {{/if}}
+                    </div>
+                </div>
+
+                <div class="contact-section">
+                    <div class="contact-grid">
+                        {{#if email}}
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:{{email}}">{{email}}</a>
+                        </div>
+                        {{/if}}
+                        {{#if phone}}
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:{{phone}}">{{phone}}</a>
+                        </div>
+                        {{/if}}
+                        {{#if url}}
+                        <div class="contact-item">
+                            <i class="fas fa-globe"></i>
+                            <a href="{{url}}" target="_blank">{{url}}</a>
+                        </div>
+                        {{/if}}
+                        {{#with location}}
+                        {{#if city}}
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>{{city}}{{#if region}}, {{region}}{{/if}}</span>
+                        </div>
+                        {{/if}}
+                        {{/with}}
+                    </div>
+
+                    {{#if profiles}}
+                    <div class="social-links">
+                        {{#each profiles}}
+                        {{#unless (eq network "language")}}
+                        <a href="{{url}}" target="_blank" class="social-link" title="{{network}}">
+                            <i class="{{getIconClass network}}"></i>
+                        </a>
+                        {{/unless}}
+                        {{/each}}
+                    </div>
+                    {{/if}}
+                </div>
+            </div>
+            {{/with}}
+        </header>
+
+        <main class="main-content">
+            <!-- Work Experience Section -->
+            {{#if resume.work}}
+            <section class="section">
+                <div class="section-header">
+                    <h3 class="section-title">
+                        <i class="fas fa-briefcase"></i>
+                        <span data-i18n="workExperience">Work Experience</span>
+                    </h3>
+                </div>
+                <div class="timeline">
+                    {{#each resume.work}}
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="job-header">
+                                <h4 class="job-title">{{position}}</h4>
+                                <div class="company-info">
+                                    {{#if url}}
+                                    <a href="{{url}}" target="_blank" class="company">{{company}}</a>
+                                    {{else}}
+                                    <span class="company">{{company}}</span>
+                                    {{/if}}
+                                </div>
+                                <div class="job-period">
+                                    <span class="dates">{{formattedStartDate}} - {{formattedEndDate}}</span>
+                                    {{#if duration}}
+                                    <span class="duration">• {{duration}}</span>
+                                    {{/if}}
+                                </div>
+                            </div>
+                            {{#if summary}}
+                            <p class="job-summary">{{summary}}</p>
+                            {{/if}}
+                            {{#if highlights}}
+                            <ul class="highlights">
+                                {{#each highlights}}
+                                <li>{{this}}</li>
+                                {{/each}}
+                            </ul>
+                            {{/if}}
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </section>
+            {{/if}}
+
+            <!-- Skills Section -->
+            {{#if resume.skills}}
+            <section class="section">
+                <div class="section-header">
+                    <h3 class="section-title">
+                        <i class="fas fa-code"></i>
+                        <span data-i18n="skills">Skills</span>
+                    </h3>
+                </div>
+                <div class="skills-container">
+                    {{#each resume.skills}}
+                    <div class="skill-group {{toLowerCase level}}">
+                        <div class="skill-header">
+                            <h4 class="skill-name">{{name}}</h4>
+                            {{#if level}}
+                            <span class="skill-level {{toLowerCase level}}">{{level}}</span>
+                            {{/if}}
+                        </div>
+                        {{#if keywords}}
+                        <div class="skill-tags">
+                            {{#each keywords}}
+                            <span class="skill-tag">{{this}}</span>
+                            {{/each}}
+                        </div>
+                        {{/if}}
+                    </div>
+                    {{/each}}
+                </div>
+            </section>
+            {{/if}}
+
+            <!-- Education Section -->
+            {{#if resume.education}}
+            <section class="section">
+                <div class="section-header">
+                    <h3 class="section-title">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span data-i18n="education">Education</span>
+                    </h3>
+                </div>
+                <div class="education-grid">
+                    {{#each resume.education}}
+                    <div class="education-item">
+                        <h4 class="degree">{{area}}</h4>
+                        <div class="institution">{{institution}}</div>
+                        <div class="education-period">{{formattedStartDate}} - {{formattedEndDate}}</div>
+                        {{#if studyType}}
+                        <div class="study-type">{{studyType}}</div>
+                        {{/if}}
+                        {{#if url}}
+                        <div class="institution-link">
+                            <a href="{{url}}" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                View Institution
+                            </a>
+                        </div>
+                        {{/if}}
+                    </div>
+                    {{/each}}
+                </div>
+            </section>
+            {{/if}}
+
+            <!-- Awards Section -->
+            {{#if resume.awards}}
+            <section class="section">
+                <div class="section-header">
+                    <h3 class="section-title">
+                        <i class="fas fa-trophy"></i>
+                        <span data-i18n="awards">Awards & Certifications</span>
+                    </h3>
+                </div>
+                <div class="awards-grid">
+                    {{#each resume.awards}}
+                    <div class="award-item">
+                        <h4 class="award-title">{{title}}</h4>
+                        <div class="award-awarder">{{awarder}}</div>
+                        {{#if date}}
+                        <div class="award-date">{{formatDate date}}</div>
+                        {{/if}}
+                        {{#if summary}}
+                        <p class="award-summary">{{summary}}</p>
+                        {{/if}}
+                    </div>
+                    {{/each}}
+                </div>
+            </section>
+            {{/if}}
+
+            <!-- Languages Section -->
+            {{#if resume.languages}}
+            <section class="section">
+                <div class="section-header">
+                    <h3 class="section-title">
+                        <i class="fas fa-language"></i>
+                        <span data-i18n="languages">Languages</span>
+                    </h3>
+                </div>
+                <div class="languages-grid">
+                    {{#each resume.languages}}
+                    <div class="language-item">
+                        <span class="language-name">{{language}}</span>
+                        <span class="language-fluency">{{fluency}}</span>
+                    </div>
+                    {{/each}}
+                </div>
+            </section>
+            {{/if}}
+
+            <!-- Projects Section -->
+            {{#if resume.projects}}
+            <section class="section">
+                <div class="section-header">
+                    <h3 class="section-title">
+                        <i class="fas fa-rocket"></i>
+                        <span data-i18n="projects">Projects</span>
+                    </h3>
+                </div>
+                <div class="projects-grid">
+                    {{#each resume.projects}}
+                    <div class="project-item">
+                        <h4 class="project-name">
+                            {{#if url}}
+                            <a href="{{url}}" target="_blank">{{name}}</a>
+                            {{else}}
+                            {{name}}
+                            {{/if}}
+                        </h4>
+                        {{#if description}}
+                        <p class="project-description">{{description}}</p>
+                        {{/if}}
+                        {{#if keywords}}
+                        <div class="project-keywords">
+                            {{#each keywords}}
+                            <span class="project-keyword">{{this}}</span>
+                            {{/each}}
+                        </div>
+                        {{/if}}
+                    </div>
+                    {{/each}}
+                </div>
+            </section>
+            {{/if}}
+        </main>
+    </div>
+
+    <script>
+        // Translations object
+        const translations = {
+            en: {
+                workExperience: 'Work Experience',
+                skills: 'Skills',
+                education: 'Education',
+                awards: 'Awards & Certifications',
+                languages: 'Languages',
+                projects: 'Projects',
+                present: 'Present'
+            },
+            es: {
+                workExperience: 'Experiencia Laboral',
+                skills: 'Habilidades',
+                education: 'Educación',
+                awards: 'Premios y Certificaciones',
+                languages: 'Idiomas',
+                projects: 'Proyectos',
+                present: 'Actualidad'
+            }
+        };
+
+        // Language detection function
+        function detectLanguage() {
+            // Check URL parameter first (?lang=es or ?lang=en)
+            const urlParams = new URLSearchParams(window.location.search);
+            const langParam = urlParams.get('lang');
+            if (langParam && (langParam === 'es' || langParam === 'en')) {
+                return langParam;
+            }
+
+            // Check filename (resume_es.html = Spanish, resume.html = English)
+            const path = window.location.pathname;
+            if (path.includes('_es.html') || path.includes('/es/') || path.includes('-es.html')) {
+                return 'es';
+            }
+
+            // Default to English
+            return 'en';
+        }
+
+        // Apply translations to the page
+        function applyTranslations(lang) {
+            const t = translations[lang];
+
+            // Update section titles
+            const sectionTitles = document.querySelectorAll('[data-i18n]');
+            sectionTitles.forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (t[key]) {
+                    element.textContent = t[key];
+                }
+            });
+
+            // Update "Present" text in job periods
+            const presentElements = document.querySelectorAll('.dates');
+            presentElements.forEach(element => {
+                if (element.textContent.includes('Present')) {
+                    element.innerHTML = element.innerHTML.replace(/Present/g, t.present);
+                }
+            });
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Detect and apply language
+            const currentLang = detectLanguage();
+            applyTranslations(currentLang);
+
+            // Language menu toggle functionality
+            const languageMenu = document.querySelector('.language-menu');
+            const languageToggle = document.querySelector('.language-toggle');
+            const languageDropdown = document.querySelector('.language-dropdown');
+
+            if (languageToggle && languageDropdown) {
+                languageToggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    languageMenu.classList.toggle('active');
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', function() {
+                    languageMenu.classList.remove('active');
+                });
+
+                // Prevent menu close when clicking inside dropdown
+                languageDropdown.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                });
+            }
+
+            // Handle language parameter in URLs
+            const languageLinks = document.querySelectorAll('.language-option');
+            languageLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href && !href.includes('?lang=')) {
+                    // Add language parameter to maintain consistency
+                    const isSpanish = href.includes('_es.html');
+                    const langParam = isSpanish ? '?lang=es' : '?lang=en';
+                    link.setAttribute('href', href + langParam);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
