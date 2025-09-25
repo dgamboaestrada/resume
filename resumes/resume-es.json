@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Daniel Gamboa Estrada",
-    "label": "Ingeniero de Confiabilidad del Sitio y Desarrollador Backend",
+    "label": "Site Reliability Engineer",
     "image": "./image.png",
     "email": "contact@danielgamboa.mx",
     "phone": "",
     "url": "https://danielgamboa.mx",
-    "summary": "Daniel es un Ingeniero de Software experimentado con pasión por la tecnología e innovación. Más de 9 años de experiencia en desarrollo backend, DevOps y gestión de servicios en la nube. Algunas de las tecnologías con las que Daniel ha trabajado como SRE son: AWS, Terraform y Docker. Como desarrollador, ha trabajado principalmente con PHP y Ruby.",
+    "summary": "Daniel es un Ingeniero de Software experimentado con pasión por la tecnología e innovación. Más de 10 años de experiencia en desarrollo backend, DevOps y gestión de servicios en la nube. Algunas de las tecnologías con las que Daniel ha trabajado como SRE son: AWS, Terraform y Docker. Como desarrollador, ha trabajado principalmente con PHP y Ruby.",
     "location": {
       "address": "",
       "postalCode": "",
