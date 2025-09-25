@@ -1,0 +1,24 @@
+{
+  "name": "jsonresume-theme-google-style",
+  "version": "1.0.0",
+  "description": "Google Style theme - Modern resume with Material Design colors and professional layout",
+  "main": "index.js",
+  "author": "Daniel Gamboa Estrada",
+  "license": "MIT",
+  "dependencies": {
+    "handlebars": "^4.7.8",
+    "moment": "^2.29.4"
+  },
+  "keywords": [
+    "jsonresume",
+    "theme",
+    "resume",
+    "cv",
+    "google",
+    "material-design",
+    "modern",
+    "professional",
+    "responsive",
+    "clean"
+  ]
+}
