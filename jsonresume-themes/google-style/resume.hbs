@@ -11,24 +11,32 @@
     <style>{{{css}}}</style>
 </head>
 <body>
-    <!-- Language Menu -->
-    <div class="language-menu">
-        <div class="language-toggle">
-            <i class="fas fa-globe"></i>
-            <span class="current-lang" data-i18n="languageMenu">Language</span>
-            <i class="fas fa-chevron-down"></i>
+    <!-- Top Controls -->
+    <div class="top-controls">
+        <!-- Dark Mode Toggle -->
+        <div class="theme-toggle" id="themeToggle">
+            <i class="fas fa-moon" id="themeIcon"></i>
         </div>
-        <div class="language-dropdown">
-            {{#with resume.basics}}
-            {{#each profiles}}
-            {{#if (eq network "language")}}
-            <a href="{{url}}" class="language-option">
-                <i class="fas fa-language"></i>
-                <span>{{username}}</span>
-            </a>
-            {{/if}}
-            {{/each}}
-            {{/with}}
+
+        <!-- Language Menu -->
+        <div class="language-menu">
+            <div class="language-toggle">
+                <i class="fas fa-globe"></i>
+                <span class="current-lang" data-i18n="languageMenu">Language</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="language-dropdown">
+                {{#with resume.basics}}
+                {{#each profiles}}
+                {{#if (eq network "language")}}
+                <a href="{{url}}" class="language-option">
+                    <i class="fas fa-language"></i>
+                    <span>{{username}}</span>
+                </a>
+                {{/if}}
+                {{/each}}
+                {{/with}}
+            </div>
         </div>
     </div>
 
@@ -358,11 +366,45 @@
             });
         }
 
+        // Theme management functions
+        function initializeTheme() {
+            // Check for saved theme preference or default to light mode
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme === 'auto' ? (prefersDark ? 'dark' : 'light') : savedTheme;
+
+            applyTheme(theme);
+        }
+
+        function applyTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            const themeIcon = document.getElementById('themeIcon');
+            if (themeIcon) {
+                themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+            }
+            localStorage.setItem('theme', theme);
+        }
+
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            applyTheme(newTheme);
+        }
+
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', function() {
+            // Initialize theme
+            initializeTheme();
+
             // Detect and apply language
             const currentLang = detectLanguage();
             applyTranslations(currentLang);
+
+            // Theme toggle functionality
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', toggleTheme);
+            }
 
             // Language menu toggle functionality
             const languageMenu = document.querySelector('.language-menu');
