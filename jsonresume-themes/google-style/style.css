@@ -965,6 +965,7 @@ body {
   transition: all 0.3s ease;
 }
 
+
 /* Dark mode theme toggle styles */
 [data-theme="dark"] .theme-toggle {
   background: rgba(48, 49, 52, 0.95);
