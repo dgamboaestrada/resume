@@ -45,9 +45,10 @@
     "summary": "Daniel has been working for Wizeline as Cloud Infrastructure Engineer - Terraform, AWS & CI/CD Expert.",
     "highlights": [
       "Implemented a scalable and secure infrastructure on AWS.",
-      "Automated deployments with CI/CD for Terraform and Node projects using AWS Pipeline and Jenkins technologies.",
+      "Automated deployments with CI/CD for Terraform and Node projects using AWS Pipeline, Github Actions and Jenkins technologies.",
       "Configured and integrated JFrog for artifact management.",
-      "Infrastructure development implemented only serverless technologies for data management and implementation of an IoT application."
+      "Infrastructure development implemented only serverless technologies for data management and implementation of an IoT application.",
+      "Workflows automation"
     ]
   }, {
     "company": "Nimanic Technologies",
