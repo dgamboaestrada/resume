@@ -13,6 +13,11 @@ Automated resume generation with custom Google Style theme.
 ```bash
 # Install dependencies
 npm install
+# or
+npm ci # clean-install
+
+# (Optional) Automatically fix known vulnerabilities in dependencies
+npm audit fix
 
 # Build both languages
 npm run build
