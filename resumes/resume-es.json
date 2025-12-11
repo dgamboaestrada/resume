@@ -149,7 +149,8 @@
       "Ansible",
       "kubectl",
       "helm",
-      "helmfile"
+      "helmfile",
+      "CodeFresh"
     ]
   },{
     "name": "AWS",
