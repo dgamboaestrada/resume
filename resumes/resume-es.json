@@ -104,30 +104,13 @@
     "name": "SRE",
     "level": "Avanzado",
     "keywords": [
+      "AWS",
       "Terraform",
       "Docker",
       "Git",
       "JFrog Artifactory"
     ]
-  },{
-    "name": "AWS",
-    "level": "Avanzado",
-    "keywords": [
-      "AWS Cloudfront",
-      "AWS S3",
-      "AWS ECR",
-      "AWS CodeCommit",
-      "AWS Lambda",
-      "AWS Route53",
-      "AWS EC2",
-      "AWS ECS",
-      "AWS CloudWatch",
-      "AWS DynamoDB",
-      "AWS CodeBuild",
-      "AWS CodeDeploy",
-      "AWS CodePipeline"
-    ]
-  },{
+,{
     "name": "Desarrollo Backend",
     "level": "Avanzado",
     "keywords": [
@@ -152,25 +135,7 @@
       "helmfile",
       "CodeFresh"
     ]
-  },{
-    "name": "AWS",
-    "level": "Intermedio",
-    "keywords": [
-      "AWS SQS",
-      "AWS IAM",
-      "AWS Glue",
-      "AWS RDS",
-      "AWS SNS",
-      "AWS Cognito",
-      "AWS API Gateway",
-      "AWS Athena",
-      "AWS Appsync",
-      "Amazon S3 File Gateway",
-      "AWS WAF",
-      "AWS SES",
-      "AWS VPC Endpoint"
-    ]
-  },{
+,{
     "name": "Desarrollo Backend",
     "level": "Intermedio",
     "keywords": [
