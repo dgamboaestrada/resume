@@ -101,7 +101,7 @@
   "publications": [
   ],
   "skills": [{
-    "name": "SRE",
+    "name": "SRE/DevOps",
     "level": "Avanzado",
     "keywords": [
       "AWS",
@@ -110,7 +110,7 @@
       "Git",
       "JFrog Artifactory"
     ]
-,{
+  },{
     "name": "Desarrollo Backend",
     "level": "Avanzado",
     "keywords": [
@@ -121,9 +121,10 @@
       "MySQl"
     ]
   },{
-    "name": "SRE",
+    "name": "SRE/DevOps",
     "level": "Intermedio",
     "keywords": [
+      "GCP",
       "Github Actions",
       "nginx",
       "Bash",
@@ -135,7 +136,7 @@
       "helmfile",
       "CodeFresh"
     ]
-,{
+  },{
     "name": "Desarrollo Backend",
     "level": "Intermedio",
     "keywords": [
