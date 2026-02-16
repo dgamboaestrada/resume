@@ -18,7 +18,7 @@
     "build-pdf:es": "node ./node_modules/.bin/resume export --format pdf --theme ./jsonresume-themes/google-style --resume resumes/resume-es.json dist/resume_es.pdf",
     "preview": "node ./node_modules/.bin/resume serve --theme ./jsonresume-themes/google-style --resume resumes/resume-en.json --port 4000",
     "preview:es": "node ./node_modules/.bin/resume serve --theme ./jsonresume-themes/google-style --resume resumes/resume-es.json --port 4001",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jq . resumes/resume-en.json && jq . resumes/resume-es.json"
   },
   "repository": {
     "type": "git",

@@ -22,6 +22,9 @@ npm audit fix
 # Build both languages
 npm run build
 
+# Test
+npm run test
+
 # Build specific language
 npm run build:en    # English
 npm run build:es    # Spanish
