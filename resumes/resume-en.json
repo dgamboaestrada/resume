@@ -131,8 +131,8 @@
       "Linux",
       "Jenkins",
       "Ansible",
-      "kubectl",
-      "helm",
+      "kubernetes",
+
       "helmfile",
       "CodeFresh"
     ]
