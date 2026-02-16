@@ -89,6 +89,8 @@ jobs:
       HOST_DIRECTORY_PATH: ${{ secrets.HOST_DIRECTORY_PATH }}
       CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
       CLOUDFLARE_API_KEY: ${{ secrets.CLOUDFLARE_API_KEY }}
+      SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+      SLACK_CHANNEL_ID: ${{ vars.SLACK_CHANNEL_ID }}
 
     runs-on: ubuntu-24.04
 
@@ -123,3 +125,23 @@ jobs:
           -H "Authorization: Bearer $CLOUDFLARE_API_KEY" \
           -H "Content-Type: application/json" \
           --data '{"purge_everything":true}'
+
+      - name: Send Slack Notification (Success)
+        uses: slackapi/slack-github-action@v2.1.1
+        with:
+          method: chat.postMessage
+          token: ${{ secrets.SLACK_BOT_TOKEN }}
+          payload: |
+            channel: ${{ vars.SLACK_CHANNEL_ID }}
+            text: "Deployment successful for ${{ github.repository }}! :white_check_mark:\nRepository: ${{ github.repository }}\nBranch: ${{ github.ref_name }}\nCommit: ${{ github.sha }}\nView Workflow Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+        if: success()
+
+      - name: Send Slack Notification (Failure)
+        uses: slackapi/slack-github-action@v2.1.1
+        with:
+          method: chat.postMessage
+          token: ${{ secrets.SLACK_BOT_TOKEN }}
+          payload: |
+            channel: ${{ vars.SLACK_CHANNEL_ID }}
+            text: "Deployment failed for ${{ github.repository }}! :x:\nRepository: ${{ github.repository }}\nBranch: ${{ github.ref_name }}\nCommit: ${{ github.sha }}\nView Workflow Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+        if: failure()
