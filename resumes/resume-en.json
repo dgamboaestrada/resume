@@ -159,7 +159,15 @@
     "keywords": [
       "Cursor",
       "Antigravity",
-      "Gemini"
+      "Gemini",
+      "Claude Code",
+      "Agent Skills"
+    ]
+  },{
+    "name": "Business Intelligence",
+    "level": "Beginner",
+    "keywords": [
+      "Looker"
     ]
   }],
   "languages": [{
