@@ -6,7 +6,7 @@
   "author": "Daniel Gamboa Estrada",
   "license": "MIT",
   "dependencies": {
-    "handlebars": "^4.7.8",
+    "handlebars": "^4.7.9",
     "moment": "^2.29.4"
   },
   "keywords": [
