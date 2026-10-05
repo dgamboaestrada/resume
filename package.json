@@ -7,7 +7,7 @@
     "node": "24.5.0"
   },
   "dependencies": {
-    "resume-cli": "^3.1.2"
+    "resume-cli": "^3.7.3"
   },
   "scripts": {
     "build": "npm run build:en && npm run build:es",
